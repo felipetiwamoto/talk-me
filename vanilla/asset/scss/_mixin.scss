@@ -1,0 +1,90 @@
+@mixin xs {
+	@media (max-width: 576px) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media (min-width: 576px) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media (min-width: 1400px) {
+		@content;
+	}
+}
+
+@mixin minMedia($breakpoint) {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin maxMedia($breakpoint) {
+	@media (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin flex($align: initial, $justify: initial, $direction: initial) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}
+
+@mixin inline-flex($align: initial, $justify: initial, $direction: initial) {
+	display: inline-flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}
+
+@mixin title($size: 16px, $weight: 500, $spacing: initial, $height: initial) {
+	font-family: 'Roboto';
+	font-size: $size;
+	font-weight: $weight;
+	letter-spacing: $spacing;
+	line-height: $height;
+}
+
+@mixin text($size: 16px, $weight: 400, $spacing: initial, $height: initial) {
+	font-family: 'Open Sans';
+	font-size: $size;
+	font-weight: $weight;
+	letter-spacing: $spacing;
+	line-height: $height;
+}
+
+@mixin row($gap: -15px) {
+	display: flex;
+	flex-wrap: wrap;
+	margin-inline: $gap;
+}
+
+@mixin column($size: 100%, $gap: 15px) {
+	max-width: $size;
+	flex-basis: $size;
+	padding-inline: $gap;
+	box-sizing: border-box;
+}
